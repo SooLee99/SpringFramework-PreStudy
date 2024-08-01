@@ -19,14 +19,12 @@ public class UserController {
 
     @PostMapping("/sign-up")
     public SignUpResponse signUp(SignUpRequest signUpRequest) {
-        // TODO: Implement the method
-        return userService.signUp(signUpRequest.getUserName(), signUpRequest.getPassword());
+        return userService.signUp(signUpRequest);
     }
 
     @PostMapping("/login")
-    public String login(LoginRequest loginRequest) {
-        // TODO: Implement the method
-        return userService.login(loginRequest.getUserName(), loginRequest.getPassword());
+    public LoginResponse login(LoginRequest loginRequest) {
+        return userService.login(loginRequest);
     }
 
 

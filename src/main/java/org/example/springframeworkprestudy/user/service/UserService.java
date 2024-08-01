@@ -1,5 +1,7 @@
 package org.example.springframeworkprestudy.user.service;
 
+import org.example.springframeworkprestudy.user.dto.request.LoginRequest;
+import org.example.springframeworkprestudy.user.dto.request.SignUpRequest;
 import org.example.springframeworkprestudy.user.dto.response.LoginResponse;
 import org.example.springframeworkprestudy.user.dto.response.SignUpResponse;
 import org.springframework.stereotype.Service;
@@ -7,13 +9,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-    public SignUpResponse signUp(String userName, String password) {
+    public SignUpResponse signUp(SignUpRequest signUpRequest) {
         // TODO: Implement the methods
-        return new SignUpResponse(userName, password);
+        return new SignUpResponse(signUpRequest.getUserName(), signUpRequest.getPassword());
     }
 
-    public String login(String userName, String password) {
+    public LoginResponse login(LoginRequest loginRequest) {
         // TODO: Implement the methods
-        return "";
+        return new LoginResponse("");
     }
 }
